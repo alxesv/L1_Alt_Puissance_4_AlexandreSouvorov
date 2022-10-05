@@ -1,13 +1,12 @@
-.menu-nav {
-    list-style: none;
-    display: flex;
+.menunav {
+    list-style:none;
 }
 
 #main-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color:rgb (8,8,37);
+    list-style: none;
 }
 
 .menu-nav a {
@@ -21,10 +20,14 @@
 }
 
 .menu-nav a:hover {
-    color: blue;
-    background-color: black;
+    color:orange;
+    background-color: blanc;
 }
-.titredebannieres{
-    color: rgba(8,8,37);
+.Titredebannieress{
     text-align: center;
+    justi
+}
+.imagedefond{
+    background-image: url("../images/image-jeux.jpg");
+    height: 800px;
 }
