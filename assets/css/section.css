@@ -1,0 +1,65 @@
+.card-text{
+    display: flex;
+}
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.cards img{
+    margin-left: 1em;
+}
+.stats_section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.stats{
+    margin-left: 1em;
+    display: flex;
+}
+.stats div>div{
+    height: 100px;
+    width: 200px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1em;
+}
+.stats>div{
+    width:50%;
+}
+#games_played{
+    background-color: blue;
+}
+#players_online{
+    background-color: green;
+}
+#best_time{
+    background-color: purple;
+}
+#registered_players{
+    background-color: orange;
+}
+.team_members_box{
+    display: flex;
+    justify-content: center;
+}
+.member img{
+    border-radius: 50%;
+}
+.member p{
+    text-align: center;
+}
+.team_section{
+    text-align: center;
+}
+.member {
+    background-color: rgba(156, 107, 154, 0.5);
+    margin-left: 1em;
+    padding: 1em 2em;
+}
+.member p:first-of-type{
+    font-weight: bold;
+}
