@@ -7,12 +7,13 @@
     
 
 }
-
-h1{
+.title-footer , .title-footer2 {
     color: rgb(249, 249, 249);
-
+    font-size: 16px;
 }
-p , .contact , .mail ,  .localisation , ul{
+
+
+.sentence , .contact , .mail ,  .localisation , ul{
     color: rgb(156, 149, 149);
 }
 
@@ -25,11 +26,11 @@ p , .contact , .mail ,  .localisation , ul{
 
 
 }
-li::before {
+.footer-li , .contact-icone::before {
     content: "•"; color: rgb(197, 143, 43) ;
 }
 
-li::before {content: "•"; color: rgb(197, 133, 15);
+.footer-li , .contact-icone::before {content: "•"; color: rgb(197, 133, 15);
     display: inline-block; width: 1em;
     margin-left: -1em
 }
@@ -67,9 +68,7 @@ li::before {content: "•"; color: rgb(197, 133, 15);
 
 }
 
-h1 {
-    font-size: 16px;
-}
+
 
 .footer-copy{
     margin-left: 66px;
