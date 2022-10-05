@@ -7,12 +7,13 @@
     
 
 }
-
-h1{
+.title-footer , .title-footer2 {
     color: rgb(249, 249, 249);
-
+    font-size: 16px;
 }
-p , .contact , .mail ,  .localisation , ul{
+
+
+.footer-copy , .sentence , .contact , .mail ,  .localisation , .footer-li{
     color: rgb(156, 149, 149);
 }
 
@@ -25,14 +26,25 @@ p , .contact , .mail ,  .localisation , ul{
 
 
 }
-li::before {
+.contact-icone::before {
     content: "•"; color: rgb(197, 143, 43) ;
 }
 
-li::before {content: "•"; color: rgb(197, 133, 15);
+.contact-icone::before {content: "•"; color: rgb(197, 133, 15);
     display: inline-block; width: 1em;
     margin-left: -1em
 }
+.help::before{
+    content: "•"; color: rgb(197, 143, 43) ;
+}
+
+.help::before {
+    content: "•"; color: rgb(197, 133, 15);
+    display: inline-block; width: 1em;
+    margin-left: -1em
+}
+
+
 
 .contact-copyright{
     background-color: rgb(8, 8, 37);
@@ -56,25 +68,26 @@ li::before {content: "•"; color: rgb(197, 133, 15);
     margin-right: 30px;
 }
 
-.contact-icone{
+
+.contact-icone {
     list-style-type : none;
     margin: 0;
-    
 
 }
-.contact-icone li{
+.contact-icone , .fa-brands-fa-square-twitter , .fa-brands-fa-square-facebook , .fa-brands-fa-google , .fa-brands-fa-square-pinterest , .fa-brands-fa-square-instagram{
+
     display: table-cell;
 
+ 
+
 }
 
-h1 {
-    font-size: 16px;
-}
+
+
+
 
 .footer-copy{
     margin-left: 66px;
 }
 
-.contact-num{
-    
-}
+
