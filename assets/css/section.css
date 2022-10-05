@@ -1,5 +1,12 @@
+main{
+    color: white;
+}
 .card-text{
     display: flex;
+}
+.card-text>p{
+    font-size: 3em;
+    color: rgb(39, 76, 179);
 }
 .cards{
     display: flex;
