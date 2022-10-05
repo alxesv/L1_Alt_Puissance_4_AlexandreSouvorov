@@ -1,25 +1,33 @@
-.menu-nav{
-    list-style: none;
-    display: flex;
+.menunav {
+    list-style:none;
 }
-#main-header{
+
+#main-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    list-style: none;
 }
-.menu-nav a{
-    font-family:Arial, Helvetica, sans-serif;
+
+.menu-nav a {
+    font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     padding: 15px;
     color: black;
     margin: 0 5px;
     transition: all 0.5s;
     border-radius: 10px;
-  }
-  .menu-nav a:hover{
-    color:blue;
-    background-color: black;
-  }
-h2 , h3{
+}
+
+.menu-nav a:hover {
+    color:orange;
+    background-color: blanc;
+}
+.Titredebannieress{
     text-align: center;
+    justi
+}
+.imagedefond{
+    background-image: url("../images/image-jeux.jpg");
+    height: 800px;
 }
