@@ -26,11 +26,11 @@
 
 
 }
-.footer-li , .contact-icone::before {
+.contact-icone::before {
     content: "•"; color: rgb(197, 143, 43) ;
 }
 
-.footer-li , .contact-icone::before {content: "•"; color: rgb(197, 133, 15);
+.contact-icone::before {content: "•"; color: rgb(197, 133, 15);
     display: inline-block; width: 1em;
     margin-left: -1em
 }
