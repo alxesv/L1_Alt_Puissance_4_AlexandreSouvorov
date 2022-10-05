@@ -1,0 +1,25 @@
+.menu-nav{
+    list-style: none;
+    display: flex;
+}
+#main-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-nav a{
+    font-family:Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    padding: 15px;
+    color: black;
+    margin: 0 5px;
+    transition: all 0.5s;
+    border-radius: 10px;
+  }
+  .menu-nav a:hover{
+    color:blue;
+    background-color: black;
+  }
+h2 , h3{
+    text-align: center;
+}
