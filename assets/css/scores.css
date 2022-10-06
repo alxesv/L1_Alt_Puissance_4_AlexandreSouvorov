@@ -1,0 +1,33 @@
+.score_section{
+    color:white;
+    display: flex;
+    justify-content: center;
+    margin: 5em 0;
+    font-size: 1.4em;
+}
+.banniere-score h1{
+    color: white;
+    font-size: 3em;
+}
+.score_table{
+    border-collapse: separate;
+    border-spacing: 0.5em;
+}
+.score_table th, td, tr{
+    padding: 0.5em;
+    border: rgb(194, 83, 213) 1px solid;
+    border-radius: 2px;
+}
+.score_table th{
+    font-weight: bold;
+    font-size: 1.2em;
+    color: rgb(233, 233, 68);
+}
+.banniere-score{
+    background: url("../images/imagescore.jpg") center;
+    background-size: cover;
+    height: 15em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
