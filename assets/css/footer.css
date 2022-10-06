@@ -1,12 +1,24 @@
 .footer1{
     background-color: rgb(8, 8, 37);
+
+}
+
+.footer-display{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 80px;
-    
+    align-items: flex-start;
+    padding:80px ; 
 
 }
+
+
+.contact-copyright{
+    margin-left: 1.3em;
+
+}
+
+
 .title-footer , .title-footer2 {
     color: rgb(249, 249, 249);
     font-size: 1.2em;
@@ -23,14 +35,20 @@
 
 .footer-li{
     list-style: none;
-    padding: 1em;
-
+    margin-top: 0.8em;
+    margin-right: 2em;
 
 
 }
 
 .foot{
     padding: 1em;
+
+
+}
+.foot2 {
+    padding: 1em;
+
 }
 .contact-icone::before {
     content: "•"; color: rgb(197, 143, 43) ;
@@ -63,11 +81,15 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-bottom: 8px;    
+    padding-bottom: 1em;    
 }
 
 .help{
     margin-right: 30px;
+    padding-bottom: 1em;
+    list-style: square ;
+    color: orange; 
+
 
 }
 
@@ -88,18 +110,9 @@
     flex-direction: row;
     justify-content: flex-start;
     color: orange;
-    height: 7em;
+    height: 2em;
     padding-top: 15px; 
 }
-
-
-
-
-    
-
-    
-
-
 
 
 
@@ -152,7 +165,8 @@
 
 color: rgb(144, 152, 173);
 text-decoration: none;
-padding: 1em;
+
+
 }
 
 .lien:hover{
@@ -170,5 +184,10 @@ padding: 1em;
 
 .link-social{
     color: orange;
+    background-color: white;
+    height: 1em;
+    padding-bottom : 0.25em;
+    padding-top: 0.36em;
+    border-radius: 1em;
 }
 
