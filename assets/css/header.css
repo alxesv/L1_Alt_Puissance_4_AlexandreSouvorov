@@ -7,8 +7,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    list-style: none;
     padding: 2em;
+}
+
+.menunav a{
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+    margin: 0 5px;
+    transition: all 0.5s;
+}
+.menunav a:hover {
+    color:orange;
+    border-top: solid orange 2px;
+    border-radius: 10px;
 }
 .bouttonjouer{
     color: white;
@@ -20,34 +33,21 @@
 .bouttonjouer:hover{
     border: solid 3px black;
 }
-.menunav a{
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    padding: 10px;
-    color: white;
-    margin: 0 5px;
-    transition: all 0.5s;
-}
-.titredejeux{
-    color: white;
-    font-size: 1.3em;
-}
-.menunav a:hover {
-    color:orange;
-    border-top: solid orange 2px;
-    border-radius: 10px;
-}
 .titredebannieres{
     color: white;
     font-size: 3em;
+}
+.titreacceuil{
+    color: white;
+    font-size: 1.3em;
 }
 .soustitre{
     padding: 1.2em;
     color: white;
     font-size: 1.2em;
 }
-.imagedefond{
-    padding: 1.5em;
+.titreheader{
+    padding: 2em;
     display: flex;
     justify-content: center;
     flex-direction: column;
