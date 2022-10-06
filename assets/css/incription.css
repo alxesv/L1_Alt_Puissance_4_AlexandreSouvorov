@@ -1,0 +1,62 @@
+body{
+    width: 100%;
+    
+}
+
+.bannierelogin{
+    background: url("../images/imagelogin.jpg") center;
+    background-size: cover;
+    height: 15em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.titredejeux{
+    color: white;
+}
+
+
+.form-inscription{
+    display: flex; 
+    justify-content: center;
+    color: white;
+    padding: 8em;
+    
+
+
+}
+.button-inscription{
+    
+    background-color: orange;
+    color: white;
+    padding: 1em;
+    border : solid ; 
+    border-radius: 3px;
+    border-color: orange;
+}
+
+.form-email , .form-pseudo , .form-mdp , .form-confirm{
+    border-radius: 0.3em;
+    background-color: #282646;
+    border: solid;
+    border-color: #282646;
+    
+    
+    width: 45em ;
+    height: 3.5em;
+    color: orange;
+    padding-left: 1em;
+    
+    
+}
+.form-note input::placeholder{
+    color: rgba(255, 255, 255, 0.404);
+    padding: 1em;
+    
+    
+}
+
+.form-note input{
+    margin-top: 2em;
+}
+
