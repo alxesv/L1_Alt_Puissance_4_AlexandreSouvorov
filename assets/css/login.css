@@ -22,6 +22,7 @@ margin: 5em;
     align-items: center;
 }
 .bouttonconnexion{
+    border-radius:0.3em;
     color: white;
     background-color: orange;
     font-size: 1em;
@@ -38,4 +39,7 @@ margin: 5em;
     border-color: #282646;
     border: none;
 
+}
+.formulairelogin input::placeholder{
+    padding: 1em;
 }
