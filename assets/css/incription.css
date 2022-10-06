@@ -1,0 +1,46 @@
+body{
+    width: 100%;
+    
+}
+
+.form-inscription{
+    display: flex; 
+    justify-content: center;
+    color: white;
+    padding: 200px;
+    
+
+
+}
+.button-inscription{
+    
+    background-color: orange;
+    color: white;
+    padding: 1em;
+    border : solid ; 
+    border-radius: 3px;
+    border-color: orange;
+}
+
+.form-email , .form-pseudo , .form-mdp , .form-confirm{
+    border-radius: 0.3em;
+    background-color: #282646;
+    border: solid;
+    border-color: #282646;
+    
+    
+    width: 50em ;
+    height: 4em;
+    
+    
+}
+.form-note input::placeholder{
+    color: rgba(255, 255, 255, 0.404);
+    margin-right: 5em;
+    
+}
+
+.form-note input{
+    margin-top: 2em;
+}
+
