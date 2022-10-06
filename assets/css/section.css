@@ -55,7 +55,7 @@ main section{
     margin: 1em 0.5em;
 }
 #games_played{
-    background-color: blue;
+    background-color: rgb(19, 19, 102);
 }
 #players_online{
     background-color: green;
