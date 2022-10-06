@@ -1,22 +1,4 @@
-.titremyaccount{
+p{
+    font-size: 1.6em;
     color: white;
-    font-size: 3em;
-    display: flex;
-    justify-content: center;
-    padding-top: 2em;
-}
-.bannieremyaccount{
-    background-image: url(../images/imagelogin.jpg);
-    background-size: cover;
-    height: 15em;
-    justify-content: center;
-}
-.formulairemyaccount{
-border-radius: 0.5em;
-    Margin-top: 1.3em;
-    width: 25em;
-    height: 2.5em;
-    background-color:#282646;
-    border-color: #282646;
-    border: none;
 }
