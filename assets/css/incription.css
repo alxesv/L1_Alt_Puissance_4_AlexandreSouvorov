@@ -3,11 +3,24 @@ body{
     
 }
 
+.bannierelogin{
+    background: url("../images/imagelogin.jpg") center;
+    background-size: cover;
+    height: 15em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.titredejeux{
+    color: white;
+}
+
+
 .form-inscription{
     display: flex; 
     justify-content: center;
     color: white;
-    padding: 200px;
+    padding: 8em;
     
 
 
@@ -29,14 +42,17 @@ body{
     border-color: #282646;
     
     
-    width: 50em ;
-    height: 4em;
+    width: 45em ;
+    height: 3.5em;
+    color: orange;
+    padding-left: 1em;
     
     
 }
 .form-note input::placeholder{
     color: rgba(255, 255, 255, 0.404);
-    margin-right: 5em;
+    padding: 1em;
+    
     
 }
 
