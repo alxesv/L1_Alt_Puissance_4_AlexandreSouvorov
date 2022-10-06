@@ -1,4 +1,7 @@
-p{
+.formulairesection p{
     font-size: 1.6em;
     color: white;
+}
+.formulairelogin{
+    margin: 2em;
 }
