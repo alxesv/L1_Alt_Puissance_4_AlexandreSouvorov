@@ -13,10 +13,6 @@
 }
 
 
-.contact-copyright{
-    margin-left: 1.3em;
-
-}
 
 
 .title-footer , .title-footer2 {
@@ -50,11 +46,15 @@
     padding: 1em;
 
 }
+
+
+/* colorisation des puces */
 .contact-icone::before {
     content: "•"; color: rgb(197, 143, 43) ;
 }
 
-.contact-icone::before {content: "•"; color: rgb(197, 133, 15);
+.contact-icone::before {
+    content: "•"; color: rgb(197, 133, 15);
     display: inline-block; width: 1em;
     margin-left: -1em
 }
@@ -69,7 +69,7 @@
 }
 
 
-
+/* positionnement de la mention copyright */
 .contact-copyright{
     background-color: rgb(8, 8, 37);
     margin-top: -30px;
@@ -83,6 +83,7 @@
     align-items: center;
     padding-bottom: 1em;    
 }
+
 
 .help{
     margin-right: 30px;
@@ -130,7 +131,7 @@
 
 .title-footer{
     
-    padding: 8px ;
+    padding:  8px ;
 
 }
 
@@ -178,15 +179,15 @@ text-decoration: none;
     color: orange;
 }
 .contact-icone li {
-    margin-right: 1em;
+    margin-right: 0.5em;
 }
 
 .link-social{
     color: orange;
     background-color: white;
     height: 1em;
-    padding-bottom : 0.25em;
-    padding-top: 0.36em;
-    border-radius: 1em;
+    padding-bottom : 0.3em;
+    padding-top: 0.3em;
+    border-radius: 0.2em;
 }
 
