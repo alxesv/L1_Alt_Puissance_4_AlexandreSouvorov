@@ -5,6 +5,7 @@ main section{
     margin-bottom: 6em;
     margin-top: 2em;
 }
+/* Cards */
 .card_section{
     display: flex;
     flex-direction: column;
@@ -36,6 +37,7 @@ main section{
 .cards img:not(:first-child){
     margin-left: 1em;
 }
+/* Stats */
 .stats_section{
     display: flex;
     align-items: center;
@@ -72,6 +74,10 @@ main section{
     font-size: 2em;
     margin-bottom: 0.3em;
 }
+.stat_box span{
+    text-align: center;
+}
+/* Team */
 .team_members_box{
     display: flex;
     justify-content: center;
@@ -102,3 +108,141 @@ main section{
 .member p:first-of-type{
     font-weight: bold;
 }
+
+
+@media (max-width: 1025px){
+    /* Card */
+    .card_section img{
+        width: 50%;
+        height: 40%;
+        margin-bottom: 1em;
+    }
+    .card_section{
+        display: flex;
+        flex-direction: row;
+    }
+    .cards{ 
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cards img:not(:first-child){
+    margin-left: 0;
+    }
+    .card-text{
+        flex-direction: column;
+        width: 60%;
+        align-items: flex-start;
+    }
+    .card-text div{
+        font-size: 0.8em;
+        width: 80%;
+        margin-bottom: 3em;
+    }
+    .card-text>p{
+        font-size: 2.5em;
+    }
+    /* Stats */
+    .stats{
+        flex-wrap: wrap;
+    }
+    .stats_section{
+        width: 50%;
+        flex-wrap: wrap;
+        justify-content: center;    
+    }
+    .stats_section img {
+        width: 70%;
+    }
+    .stats div>div{
+        height: 5em;
+        width: 9em;
+    }
+    .stat_box p{
+        font-size: 1em;
+    }
+    .stat_box{
+        font-size: 1em;
+    }
+
+    /* Team */
+    .team_section h2{
+        font-size: 2.2em;
+    }
+    .team_section h3{
+        font-size: 0.9em;
+    }
+    .team_members_box{
+        flex-wrap: wrap;
+    }
+}
+
+
+@media (max-width: 769px){
+    /* Card */
+    .card_section img{
+        width: 50%;
+        height: 40%;
+        margin-bottom: 1em;
+    }
+    .card-text{
+        width: 60%;
+    }
+    .card-text div{        
+        font-size: 1em;
+        margin-bottom: 3em;
+    }
+    .card-text>p{
+        font-size: 2em;
+    }
+    /* Stats */
+    .stats_section img {
+        width: 50%;
+    }
+    .stat_box{
+        font-size: 0.8em;
+    }
+    /* Team */
+    .team_section h2{
+        font-size: 1.8em;
+    }
+    .team_section h3{
+        font-size: 0.8em;
+    }
+}
+
+
+
+@media (max-width: 480px) { 
+    /* Card */
+
+    .card-text{
+        width: 50%;
+    }
+    .card-text div{
+        font-size: 0.6em;
+        overflow: scroll;
+        width: 70%;
+        margin-bottom: 1em;
+    }
+    .card-text>p{
+        font-size: 1.7em;
+    }
+/* Stats */
+.stats_section img {
+    width: 30%;
+}
+    .stats_section{
+        width: 100%;
+    }
+
+/* Team */
+.team_section h2{
+    font-size: 1.4em;
+}
+.team_section h3{
+    font-size: 0.6em;
+}
+    
+ }
