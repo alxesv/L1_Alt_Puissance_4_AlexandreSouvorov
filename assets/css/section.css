@@ -51,8 +51,10 @@ main section{
     color: white;
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
     margin: 1em 0.5em;
+    font-weight: bold;
 }
 #games_played{
     background-color: rgb(19, 19, 102);
@@ -65,6 +67,10 @@ main section{
 }
 #registered_players{
     background-color: orange;
+}
+.stat_box p{
+    font-size: 2em;
+    margin-bottom: 0.3em;
 }
 .team_members_box{
     display: flex;
