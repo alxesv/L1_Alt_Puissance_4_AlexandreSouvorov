@@ -23,6 +23,14 @@ body{
     color: white;
     padding: 8em;
 }
+.button-inscription{ 
+    background-color: orange;
+    color: white;
+    padding: 1em;
+    border : solid ; 
+    border-radius: 3px;
+    border-color: orange;
+    }
 
 
 /* colorer, agrandir les zones de saisie de texte du formulaire  */
@@ -31,6 +39,8 @@ body{
     background-color: #282646;
     border: solid;
     border-color: #282646;
+
+
     width: 45em ;
     height: 3.5em;
     color: orange;
@@ -42,7 +52,6 @@ body{
 .form-note input::placeholder{
     color: rgba(255, 255, 255, 0.404);
     padding: 1,5em;
-    
 }
 
 
