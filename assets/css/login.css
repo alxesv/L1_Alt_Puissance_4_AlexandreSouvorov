@@ -25,10 +25,9 @@ margin: 5em;
     border-radius:0.3em;
     color: white;
     background-color: orange;
-    font-size: 1em;
-    width: 6em;
-    height: 2em;
-    Margin-top: 1.3em;
+    width: 6.3em;
+    height: 3em;
+    Margin-top: 2em;
 }
 .formulairelogin input{
     border-radius: 0.5em;
@@ -36,10 +35,8 @@ margin: 5em;
     width: 25em;
     height: 2.5em;
     background-color:#282646;
-    border-color: #282646;
+    color: orange;
     border: none;
+    padding-left: 0.4em;
+}
 
-}
-.formulairelogin input::placeholder{
-    padding: 1em;
-}
