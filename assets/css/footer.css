@@ -1,5 +1,6 @@
 .footer1{
     background-color: rgb(8, 8, 37);
+    ;
 
 }
 
@@ -9,6 +10,36 @@
     justify-content: space-between;
     align-items: flex-start;
     padding:80px ; 
+
+}
+
+@media screen and (max-width : 480px) {
+
+    .footer-display{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding:70px ;
+        width: 100%;
+        
+    }
+
+    .footer1{
+
+        background-color: rgb(8, 8, 37);
+        width: 100%;
+
+    }
+    .contact-num , .footer-li , .sentence , .contact{
+        font-size: 0.5em;
+        width: 100%;
+    }
+    .title-footer , .title-footer2 {
+        font-size: 0,8em;
+        width: 100%;
+    }
+    
 
 }
 
@@ -190,4 +221,7 @@ text-decoration: none;
     padding-top: 0.3em;
     border-radius: 0.2em;
 }
+
+
+
 
