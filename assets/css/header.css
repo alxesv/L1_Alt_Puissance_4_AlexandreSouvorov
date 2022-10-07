@@ -28,10 +28,14 @@
     background-color: orange;
     font-size: 1em;
     width: 6em;
-    height: 2em;
+    height: 2.6em;
+    border: none;
+    border-radius: 3px;
+    
 }
-.bouttonjouer:hover{
-    border: solid 3px black;
+a .bouttonjouer:hover{
+    box-shadow: 10px 10px 10px rgb(152, 103, 11) inset;
+    
 }
 .titredebannieres{
     color: white;
