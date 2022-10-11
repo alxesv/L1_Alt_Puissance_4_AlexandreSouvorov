@@ -20,15 +20,24 @@
     <div class="banniere">
     <header id="main-header">
         <h1 class="titreacceuil">The Power Of Memory</h1>
-        <nav>           
-            <ul class="menunav">
-                <li><a href="index.html">ACCUEIL</a></li>
-                <li><a href="memory.html">JEU</a></li>
-                <li><a href="scores.html">SCORES</a></li>
-                <li><a href="contact.html">NOUS CONTACTER</a></li>
-                <li><a href="login.html">SE CONNECTER</a></li>
-                <li><a href="inscription.html">S'INSCRIRE</a></li>
-            </ul>
+        <nav>
+            <div id="mySidenav" class="sidenav">
+                    <ul class="menunav">
+                        <li><a href="index.html">ACCUEIL</a></li>
+                        <li><a href="memory.html">JEU</a></li>
+                        <li><a href="scores.html">SCORES</a></li>
+                        <li><a href="contact.html">NOUS CONTACTER</a></li>
+                        <li><a href="login.html">SE CONNECTER</a></li>
+                        <li><a href="inscription.html">S'INSCRIRE</a></li>
+                    </ul>
+            </div>
+            <a href="#" id="openBtn">
+                <span class="burger-icon">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </span>
+              </a>
         </nav>
     </header>
      <section class="titreheader">
@@ -77,19 +86,19 @@
             <img src="http://placekitten.com/g/450/300" alt="">
             <div class="stats">
                 <div class="row_1">
-                    <div id="games_played">
-                        500 Parties jouées
+                    <div id="games_played" class="stat_box">
+                        <p>500</p> <span>Parties jouées</span> 
                     </div>
-                    <div id="best_time">
-                        4s Temps record
+                    <div id="best_time" class="stat_box">
+                        <p>4s</p> <span>Temps record<nspa > 
                     </div>
                 </div>
                 <div class="row_2">
-                    <div id="players_online">
-                        32235 Joueurs connectés
+                    <div id="players_online" class="stat_box">
+                        <p>32235</p> <span>Joueurs connectés</span> 
                     </div>
-                    <div id="registered_players">
-                        53653 Joueurs enregistrés
+                    <div id="registered_players" class="stat_box">
+                        <p>53653</p> <span>Joueurs enregistrés</span> 
                     </div>
                 </div>
             </div>
@@ -222,6 +231,20 @@
 
 
     <!-- FOOTER -->
+    <!-- Burger js -->
+    <script>
+        var sidenav = document.getElementById("mySidenav");
+var openBtn = document.getElementById("openBtn");
+var closeBtn = document.getElementById("closeBtn");
+
+openBtn.onclick = openNav;
+
+/* Set the width of the side navigation to 250px */
+function openNav() {
+  sidenav.classList.toggle("active");
+}
+
+    </script>
 </body>
 
 </html>
