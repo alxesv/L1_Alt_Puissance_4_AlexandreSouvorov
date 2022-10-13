@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `message`(
 `game_id` int(10) NOT NULL,
 `author_id` int(10) NOT NULL,
 `message` varchar(40) NOT NULL,
-`last_message_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+`message_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
 -- Création table jeu

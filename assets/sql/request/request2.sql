@@ -1,6 +1,11 @@
-/* créer un utilisateur lors de la première inscription */
+/* mettre à jour le profil une fois connecté */
 
-INSERT INTO `user`(`email`, `password`, `pseudo`, `register`) VALUES
-('sofiane@gmail.fr','abcdefg','soso',CURRENT_TIMESTAMP),
-('alexandre@gmail.fr','abcdefg','alex',CURRENT_TIMESTAMP),
-('djamel@gmail.fr','abcdefg','dja',CURRENT_TIMESTAMP);
+-- modifier l'email
+UPDATE user
+SET `email` = 'blabla@gmail.com'
+WHERE `email` = 'djamel@gmail.fr' AND `password` = 'abcdefg' AND `user_id` = 3;
+
+-- modifier le mot de passe
+UPDATE user
+SET `password` = 'pass123'
+WHERE `password` = 'abcdefg' AND `user_id` = 3;
