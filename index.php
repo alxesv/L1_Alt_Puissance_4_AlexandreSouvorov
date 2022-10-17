@@ -25,7 +25,7 @@
      <section class="titreheader">
         <h2 class="titredebannieres">BIENVENUE DANS NOTRE STUDIOS ! </h2>
         <h3 class="soustitre">Venez challenger les cerveaux les plus agiles !</h3>
-        <a href="memory.html"><button class="bouttonjouer"> Jouer !</button></a>
+        <a href="memory.php"><button class="bouttonjouer"> Jouer !</button></a>
     </section></div> 
 
 
