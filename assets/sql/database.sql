@@ -75,3 +75,4 @@ ALTER TABLE `score`
 ADD CONSTRAINT fk_game_score
 FOREIGN KEY (game_id)
 REFERENCES game(game_id);
+
