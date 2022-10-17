@@ -123,20 +123,6 @@
             </div>
 
         </section>
-        <div>
-            <?php 
-            echo "<h1>TEST4</h1>";
-            $memoryStatement = $db->prepare('SELECT * FROM user');
-            $memoryStatement ->execute();
-            $users = $memoryStatement->fetchAll();
-            foreach ($users as $user) {
-                ?>
-                    <p><?php echo $user['pseudo']; ?></p>
-                    <?php
-                        }
-                    ?>
-        </div>
-
     </main>
     <!-- MAIN -->
 
