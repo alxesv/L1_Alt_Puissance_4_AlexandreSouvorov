@@ -126,9 +126,6 @@
     </main>
     <!-- MAIN -->
 
-    
-
-
 
     <!-- FOOTER -->
     <?php include 'view/footer.inc.php'
