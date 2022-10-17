@@ -21,7 +21,7 @@ catch (Exception $e)
 
             $users = $memoryStatement->fetchAll(); -- Récupérer les données sous forme de tableau
 
-            -- Afficher les données
+            -- Afficher les données (boucle sur le tableau)
 
             foreach ($users as $user) {
                 ?>
