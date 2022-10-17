@@ -44,7 +44,7 @@
 
                 <section class="form-contact">
 
-                    <form class="form-note" method="post" action="" enctype="multipart/form-data">
+                    <form class="form-note" method="POST" action='forms/contact_form.php' enctype="multipart/form-data">
                         <div class="name-mail">
                             <input class="form-name" type="text" id="name" name="name" required placeholder="Nom"><br>
 

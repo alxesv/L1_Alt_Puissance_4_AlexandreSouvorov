@@ -23,7 +23,7 @@
         </div>
         <section class="formulairesection">
 
-            <form class="formulairelogin">
+            <form class="formulairelogin" action='forms/login_form.php' method = 'POST'>
 
                 <label for="EMAIL"></label>
                 <input type="text" name="Email" placeholder="Email"></input>

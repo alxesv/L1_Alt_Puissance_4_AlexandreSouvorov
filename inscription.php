@@ -34,7 +34,7 @@
 
 
         
-             <form class="form-note" method="post" action="" enctype="multipart/form-data">
+             <form class="form-note" method="POST" action='forms/inscription_form.php'enctype="multipart/form-data">
         
                 <label for="email"></label>
                 <input class="form-email"  type="email" id="email" name="email" placeholder="Email"><br>

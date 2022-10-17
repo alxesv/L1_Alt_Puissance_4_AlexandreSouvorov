@@ -27,7 +27,7 @@
         </div>
         <section class="formulairesection">
 
-            <form class="formulairelogin">
+            <form class="formulairelogin" action='forms/myaccount_form.php' method ="POST">
                 <p> Réinitialiser l'adresse email</p>
                 <label for="EMAIL"></label>
                 <input type="text" name="Ancien email" placeholder="Ancien email"></input>
@@ -41,7 +41,7 @@
                 <button class="bouttonconnexion" type="submit">Confirmer</button>
             </form>
 
-            <form class="formulairelogin">
+            <form class="formulairelogin" action='forms/myaccount_form.php' method ="POST">
                 <p> Réinitialiser le mot de passe</p>
                 <label for="Ancien mot de passe "></label>
                 <input type="password" name="Ancien mot de passe " placeholder="Ancien mot de passe"></input>
