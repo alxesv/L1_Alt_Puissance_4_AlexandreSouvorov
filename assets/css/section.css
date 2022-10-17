@@ -148,7 +148,6 @@ main section{
         flex-wrap: wrap;
     }
     .stats_section{
-        width: 50%;
         flex-wrap: wrap;
         justify-content: center;    
     }

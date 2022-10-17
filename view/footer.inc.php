@@ -53,9 +53,9 @@
             <div class="foot2">
                 <h1 class="title-footer2">Power of memory</h1>
                 <ul class="footer-li">
-                    <li class="help"><a class="lien" href="memory.html">Jouer !</a> </li>
-                    <li class="help"><a class="lien2" href="scores.html">Scores</a></li>
-                    <li class="help"><a class="lien3" href="contact.html">Contacter</a></li>
+                    <li class="help"><a class="lien" href="memory.php">Jouer !</a> </li>
+                    <li class="help"><a class="lien2" href="scores.php">Scores</a></li>
+                    <li class="help"><a class="lien3" href="contact.php">Contacter</a></li>
                 </ul>
 
             </div>
