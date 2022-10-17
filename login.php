@@ -40,11 +40,8 @@
   <!-- FOOTER -->
   <?php include 'view/footer.inc.php'
     ?>
-           
-
-
 <!-- FOOTER -->
-
+<script src="assets/js/burger.js"> </script>
 </body>
 
 </html>

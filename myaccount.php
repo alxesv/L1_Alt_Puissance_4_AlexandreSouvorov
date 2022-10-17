@@ -54,9 +54,7 @@
             </form>
         </section>        
     </main>
-    
-
     <?php include 'view/footer.inc.php'
     ?>
-
+<script src="assets/js/burger.js"> </script>
 </body>
