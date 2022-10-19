@@ -7,8 +7,13 @@
                         <li><a href="memory.php">JEU</a></li>
                         <li><a href="scores.php">SCORES</a></li>
                         <li><a href="contact.php">NOUS CONTACTER</a></li>
+                        <?php if(!isset($_SESSION['user_id'])) {  ?>
                         <li><a href="login.php">SE CONNECTER</a></li>
                         <li><a href="inscription.php">S'INSCRIRE</a></li>
+                        <?php }else { ?>
+                        <li><a href="logout.php">SE DECONNECTER</a></li>
+                        <li class="logged_in"><a href="myaccount.php"><?=$_SESSION['pseudo']?></a></li>
+                        <?php } ?>
                     </ul>
             </div>
             <a href="#" id="openBtn">

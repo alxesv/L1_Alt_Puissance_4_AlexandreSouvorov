@@ -62,8 +62,12 @@ a .bouttonjouer:hover{
     background-size: cover;
     height: 20em;
 }
-/* BURGER */
 
+/* BURGER */
+.logged_in a{
+  color: rgb(128, 231, 128);
+  text-transform: uppercase;
+}
 @media (max-width: 680px){
 /* Sidenav menu */
 .sidenav {

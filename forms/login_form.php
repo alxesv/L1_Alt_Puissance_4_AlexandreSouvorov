@@ -1,11 +1,29 @@
 <?php
 
-    print_r($_POST['Email']);die();
-    $loginValid = $db->prepare('SELECT *  FROM `user` WHERE `password` > 8 and  '); 
-    $loginValid -> execute(); 
-    $login = $loginValid ->fetchAll();
+=======
+require_once '../init.php';
+
+
+$email = "'" .  $_POST['email']. "'";
+$password = "'" . $_POST['mot_de_passe'] . "'";
+
+$sql = "SELECT * FROM `user` WHERE `email` = $email AND `password` = $password";
+
+$loginStatement = $db->prepare($sql); 
+$loginStatement->execute();
+$result = $loginStatement->fetchAll();
+
+if(empty($result)){
+    $loginErr = "Identifiants incorrects";
+    echo "<script>";
+    echo 'alert("' . $loginErr;
+    echo '");document.location="../login.php";</script>';
+}else {
+   header('Location:../index.php');
+   $_SESSION['user_id'] = $result[0]["user_id"];
+   $_SESSION['pseudo'] = $result[0]["pseudo"];
+}
+
+
 ?>
-
-
-
-
+>>>>>>> 8f30f36d217152a288c4a3960d78a6a6d76bed09
