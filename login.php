@@ -29,7 +29,7 @@
                 <input type="text" name="Email" placeholder="Email"></input>
 
                 <label for="Mot de passe "></label>
-                <input type="password" name="Mot de passe" placeholder="Mot de passe"></input>
+                <input type="password" name="password" placeholder="Mot de passe"></input>
 
                 <button class="bouttonconnexion" type="submit"> Connexion</button>
             </form>
