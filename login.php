@@ -23,13 +23,13 @@
         </div>
         <section class="formulairesection">
 
-            <form class="formulairelogin" action='forms/login_form.php' method = 'POST'>
+            <form class="formulairelogin" action='forms/login_form.php' method ='POST'>
 
-                <label for="EMAIL"></label>
-                <input type="text" name="Email" placeholder="Email"></input>
+                <label for="email"></label>
+                <input type="email" name="email" id = "email" placeholder="Email"></input>
 
-                <label for="Mot de passe "></label>
-                <input type="password" name="Mot de passe" placeholder="Mot de passe"></input>
+                <label for="password"></label>
+                <input type="password" name="mot_de_passe" id = "password" placeholder="Mot de passe"></input>
 
                 <button class="bouttonconnexion" type="submit"> Connexion</button>
             </form>
