@@ -23,14 +23,6 @@ body{
     color: white;
     padding: 8em;
 }
-.button-inscription{ 
-    background-color: orange;
-    color: white;
-    padding: 1em;
-    border : solid ; 
-    border-radius: 3px;
-    border-color: orange;
-    }
 
 
 /* colorer, agrandir les zones de saisie de texte du formulaire  */

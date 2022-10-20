@@ -25,10 +25,8 @@
 
             <form class="formulairelogin" action='forms/login_form.php' method ='POST'>
 
-                <label for="email"></label>
                 <input type="email" name="email" id = "email" placeholder="Email" required></input>
 
-                <label for="password"></label>
                 <input type="password" name="mot_de_passe" id = "password" placeholder="Mot de passe" required></input>
 
                 <button class="bouttonconnexion" type="submit"> Connexion</button>
