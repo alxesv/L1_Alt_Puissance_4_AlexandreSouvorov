@@ -24,7 +24,7 @@ else if(strlen($pseudo) < 4) { // check si le pseudo fait au moins 4 caractères
     echo 'alert("' . $pseudoErr;
     echo '");document.location="../inscription.php";</script>';
 }
-else if (!preg_match("~^\S*(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=\S*[\W])[a-zA-Z\d]{8,}\S*$~",$password)) { // check les règles du mdp
+else if (!preg_match("~^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$~",$password)) { // check les règles du mdp
     $mdpErr = "Votre mot de passe doit faire au minimum 8 caractères, contenir une majuscule, une minuscule, un chiffre et un caractère spécial.";
     echo "<script>";
     echo 'alert("' . $mdpErr;

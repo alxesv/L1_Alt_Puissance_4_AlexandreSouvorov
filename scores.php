@@ -1,5 +1,12 @@
 <?php
     require_once 'init.php';
+    $sql = "SELECT game.game_name as 'Jeu', user.pseudo as 'Joueur', score.game_difficulty as 'Difficulté', score.game_score as 'Score', score.game_date as 'Date' FROM score
+INNER JOIN user ON score.player_id = user.user_id
+INNER JOIN game ON score.game_id = game.game_id
+ORDER BY game.game_name ASC, score.game_difficulty, score.game_score";
+    $scoreStatement = $db->prepare($sql);
+    $scoreStatement->execute();
+    $score = $scoreStatement->fetchAll();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,36 +35,23 @@
             <thead>
                 <th>Pseudo</th>
                 <th>Jeu</th>
-                <th>Catégorie</th>
                 <th>Difficulté</th>
                 <th>Score</th>
                 <th>Date et heure</th>
             </thead>
             <tbody>
+                <?php
+                foreach ($score as $skey => $svalue){ ?>
                 <tr>
-                    <td>Bob</td>
-                    <td>Memory</td>
-                    <td>Anime</td>
-                    <td>Facile</td>
-                    <td>32s</td>
-                    <td>04/07/22 10:38</td>
-                </tr>
+                    <td><?=$svalue['Joueur']?></td>
+                    <td><?=$svalue['Jeu']?></td>
+                    <td><?=$svalue['Difficulté']?></td>
+                    <td><?=$svalue['Score']?>s</td>
+                    <td><?=$svalue['Date']?></td>
                 <tr>
-                    <td>Jim</td>
-                    <td>Memory</td>
-                    <td>People</td>
-                    <td>Difficile</td>
-                    <td>125s</td>
-                    <td>11/09/22 21:27</td>
-                </tr>
-                <tr>
-                    <td>Sam</td>
-                    <td>Memory</td>
-                    <td>Dragon</td>
-                    <td>Intermédiaire</td>
-                    <td>52s</td>
-                    <td>06/10/22 14:27</td>
-                </tr>
+                <?php  
+                }
+                ?>
             </tbody>
         </table>
     </section>
