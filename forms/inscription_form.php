@@ -41,7 +41,15 @@ if($registerStatement->execute([$email, $password, $pseudo])){
     echo "<script>";
     echo 'alert("' . "Register succesful";
     echo '");document.location="../index.php";</script>';
-    // à faire : envoyer mail à l'utilisateur
+    // envoyer un mail (pour de faux, le smtp est pas setup)
+    $smtp = false;
+    if($smtp){
+    $message = "Bonjour $pseudo ! \r\n Nous vous confirmons votre inscription à The Power of Memory.\r\nMerci et à bientôt.";
+
+    $message = wordwrap($message, 70, "\r\n");
+
+    mail("$email", 'Inscription validée !', $message);
+    }
 
 }else{
     echo "<script>";
