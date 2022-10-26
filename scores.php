@@ -1,9 +1,36 @@
 <?php
     require_once 'init.php';
     $sql = "SELECT game.game_name as 'Jeu', user.pseudo as 'Joueur', score.game_difficulty as 'Difficulté', score.game_score as 'Score', score.game_date as 'Date' FROM score
-INNER JOIN user ON score.player_id = user.user_id
-INNER JOIN game ON score.game_id = game.game_id
-ORDER BY game.game_name ASC, score.game_difficulty, score.game_score";
+    INNER JOIN user ON score.player_id = user.user_id
+    INNER JOIN game ON score.game_id = game.game_id";
+    $sqlAdd = "";
+    if (isset($_GET['search']) && $_GET['search'] != ""){
+        $searchContent = $_GET['search'];
+        $sqlAdd = " WHERE user.pseudo LIKE '%$searchContent%'";
+        }
+    if (isset($_GET['diff'])){
+        $diffContent = $_GET['diff'];
+        $sqlAdd = " WHERE score.game_difficulty = '$diffContent'";
+        }
+    if (isset($_GET['jeu'])){
+        $jeuContent = $_GET['jeu'];
+        $sqlAdd = " WHERE game.game_id = '$jeuContent'";
+        }
+    if(isset($_GET['diff']) && isset($_GET['search']) && $_GET['search'] != ""){
+        $sqlAdd = " WHERE score.game_difficulty = '$diffContent' AND user.pseudo LIKE '%$searchContent%'";
+    }
+    if(isset($_GET['diff']) && isset($_GET['jeu'])){
+        $sqlAdd = " WHERE score.game_difficulty = '$diffContent' AND game.game_id = '$jeuContent'";
+    }
+    if(isset($_GET['jeu']) && isset($_GET['search']) && $_GET['search'] != ""){
+        $sqlAdd = " WHERE game.game_id = '$jeuContent' AND user.pseudo LIKE '%$searchContent%'";
+    }
+    if(isset($_GET['diff']) && isset($_GET['search']) && $_GET['search'] != "" && isset($_GET['jeu'])){
+        $sqlAdd = " WHERE score.game_difficulty = '$diffContent' AND user.pseudo LIKE '%$searchContent%' AND game.game_id = '$jeuContent'";
+    }
+
+    $sql .= $sqlAdd;
+    $sql .= " ORDER BY game.game_name ASC, score.game_difficulty, score.game_score";
     $scoreStatement = $db->prepare($sql);
     $scoreStatement->execute();
     $score = $scoreStatement->fetchAll();
@@ -30,6 +57,21 @@ ORDER BY game.game_name ASC, score.game_difficulty, score.game_score";
     <div class="banniere-score">
         <h1>Scores</h1>
     </div>
+    <form action="scores.php" method="GET" class="filtrage">
+        <input type="text" placeholder="Chercher par pseudo..." name="search">
+        <select name="diff" id="diff">
+            <option value="" selected disabled hidden>Choisissez la difficulté</option>
+            <option value="facile">Facile</option>
+            <option value="intermediaire">Intermédiaire</option>
+            <option value="difficile">Difficile</option>
+            <option value="Impossible">Impossible</option>
+        </select>
+        <select name="jeu" id="jeu">
+            <option value="" selected disabled hidden>Choisissez le jeu</option>
+            <option value="1">Memory</option>
+        </select>
+        <button type='submit'>Filtrer</button>
+    </form>
     <section class="score_section">
         <table class="score_table">
             <thead>
