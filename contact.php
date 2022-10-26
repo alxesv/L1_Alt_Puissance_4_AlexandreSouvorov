@@ -51,12 +51,12 @@
                         <div class="name-mail">
                             <input class="form-name" type="text" id="name" name="name" required placeholder="Nom"><br>
 
-                            <input class="form-email" type="email" id="email" name="email" placeholder="Email"><br>
+                            <input class="form-email" type="email" id="email" name="email" placeholder="Email" required><br>
                         </div>
-                        <input class="form-sujet" type="text" id="sujet" name="sujet" placeholder="Sujet"><br>
+                        <input class="form-sujet" type="text" id="sujet" name="sujet" placeholder="Sujet" required><br>
 
                         <textarea class="form-text" type="textarea" id="text" name="text" placeholder="Message" rows="50"
-                            cols="50"></textarea><br>
+                            cols="50" required></textarea><br>
 
                         <input class="button-contact" type="submit" value="Envoyer">
                     </form>
