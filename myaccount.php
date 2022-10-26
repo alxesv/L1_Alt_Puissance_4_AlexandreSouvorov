@@ -14,9 +14,7 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/incription.css">    
     <link rel="stylesheet" href="assets/css/myaccount.css">
-    <link rel="stylesheet" href="assets/css/incription.css">
     <script src="https://kit.fontawesome.com/583bdb9b50.js" crossorigin="anonymous"></script>
 
 </head>
@@ -25,6 +23,7 @@
 <body>
 <?php include 'view/header.inc.php' ?>
     <main>
+        <?php if(isset($_SESSION['user_id'])){?>
         <div class="bannierelogin">
             <H1 class="titrelogin">Mon espace</H1>
         </div>
@@ -32,30 +31,33 @@
 
             <form class="formulairelogin" action='forms/myaccount_form.php' method ="POST">
                 <p> Réinitialiser l'adresse email</p>
-                <label for="EMAIL"></label>
-                <input type="text" name="Ancien email" placeholder="Ancien email"></input>
+                <input type="email" name="old_email" placeholder="Ancien email" required>
 
-                <label for="EMAIL"></label>
-                <input type="text" name="Nouvel email" placeholder="Nouvel email"></input>
+                <input type="email" name="new_email" placeholder="Nouvel email" required>
 
-                <label for="Mot de passe "></label>
-                <input type="password" name="Mot de passe " placeholder="Mot de passe"></input>
+                <input type="password" name="mot_de_passe" placeholder="Mot de passe" required>
 
                 <button class="bouttonconnexion" type="submit">Confirmer</button>
             </form>
 
             <form class="formulairelogin" action='forms/myaccount_form.php' method ="POST">
                 <p> Réinitialiser le mot de passe</p>
-                <label for="Ancien mot de passe "></label>
-                <input type="password" name="Ancien mot de passe " placeholder="Ancien mot de passe"></input>
+                <input type="password" name="old_password" placeholder="Ancien mot de passe" required>
 
-                <label for="Mot de passe "></label>
-                <input type="password" name="Nouveau mot de passe" placeholder="Nouveau mot de passe"></input>
+                <input type="password" name="new_password" placeholder="Nouveau mot de passe" required>
+
+                <input type="password" name="confirm_new_pass" placeholder="Confirmer nouveau mot de passe"required>
 
                 <button class="bouttonconnexion" type="submit">Confirmer</button>
 
             </form>
-        </section>        
+        </section>    
+        <?php }else {  ?> 
+            <div class ="login">
+            <h2>Connectez vous pour accéder à cette page</h2>
+            <a href="login.php"><button>Se connecter</button></a>
+            </div>
+            <?php } ?>
     </main>
     <?php include 'view/footer.inc.php'
     ?>

@@ -1,5 +1,15 @@
 <?php
     require_once 'init.php';
+    if(isset($_SESSION['user_id'])){
+    $user_id = $_SESSION['user_id'];
+    $sql = "SELECT `message`.`message` as 'message', user.pseudo as 'auteur', message_time as 'time', case when user.user_id = $user_id then 'Vrai' else 'Faux' end as estExpediteur
+    FROM `message`
+    INNER JOIN user ON `message`.author_id = user.user_id
+    WHERE message_time > DATE_SUB(NOW(), INTERVAL 24 HOUR) AND message_time <= NOW();";
+    $chatStatement = $db->prepare($sql);
+    $chatStatement->execute();
+    $chat = $chatStatement->fetchAll();
+    };
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -20,7 +30,9 @@
         <?php include 'view/header.inc.php' ?>
     <!-- MEMORY -->
     <section class="game_section">  
+        
         <h1>Memory</h1>
+        <?php if(isset($_SESSION['user_id'])) {?>
         <div  class="game">
        
         <table class="game_grid">
@@ -62,51 +74,36 @@
                 </tr>
             </tbody>
         </table>
+        <?php }else{ ?>
+            <div class ="login">
+            <h2>Connectez vous pour jouer !</h2>
+            <a href="login.php"><button>Se connecter</button></a>
+            </div>
+            <?php } ?>
     </div>
+    <?php if(isset($_SESSION['user_id'])){ ?>
+    <!-- CHAT -->
     <div class="chat">
         <div class="chat-header">
             <img src="https://placedog.net/50/50" alt="">
             <h3>Chat général</h3>
         </div>
-        <!-- CHAT -->
+
         <div class="chat-messages">
 
-            <div class ="message-container user-message">
-                <div class="author">Moi</div>
+        <?php
+        foreach($chat as $ckey => $cvalue){
+            ?>
+            <div class="message-container <?php if ($cvalue['estExpediteur'] == 'Vrai') {echo "user-message"; }else { echo "other-message";}; ?>">
+                <div class ="author"><?php if ($cvalue['estExpediteur'] == 'Vrai') {echo "Moi"; }else { echo $cvalue['auteur'];}?></div>
                 <div class="message">
-                    Salut !
+                    <?=$cvalue['message']?>
                 </div>
-                <div class="date-sent">Aujourd'hui à 12h32</div>
+                <div class="date-sent"><?= $cvalue['time']?></div>
             </div>
-
-            <div class="other-message-container">
-                <img src="https://placedog.net/30/30" alt="">
-                <div class ="message-container other-message">
-                    <div class="author">Bob</div>
-                    <div class="message">
-                        Lorem ipsum dolor sit amet consectetur adipisicing.
-                    </div>
-                    <div class="date-sent">Aujourd'hui à 14h02</div>
-                </div>
-            </div>
-            <div class ="message-container user-message">
-                <div class="author">Moi</div>
-                <div class="message">
-                    parle français par contre stp
-                </div>
-                <div class="date-sent">Aujourd'hui à 15h16</div>
-            </div>
-            <div class="other-message-container">
-                <img src="https://placedog.net/30/30" alt="">
-                <div class ="message-container other-message">
-                    <div class="author">Bob</div>
-                    <div class="message">
-                        Ok désolé
-                    </div>
-                    <div class="date-sent">Aujourd'hui à 15h18</div>
-                </div>
-            </div>
-
+        <?php
+        }
+        ?>
         </div>
         <div class ="chat-send">
         <form action="" method="" class="send-message">
@@ -116,6 +113,7 @@
         </div>
     </div>
     <!-- CHAT -->
+    <?php } ?>
     </section>
 
      <!-- FOOTER -->

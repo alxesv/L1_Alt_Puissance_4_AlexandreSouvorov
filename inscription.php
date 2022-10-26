@@ -39,17 +39,13 @@
         
              <form class="form-note" method="POST" action='forms/inscription_form.php'enctype="multipart/form-data">
         
-                <label for="email"></label>
-                <input class="form-email"  type="email" id="email" name="email" placeholder="Email"><br>
+                <input class="form-email"  type="email" id="email" name="email" placeholder="Email" required><br>
 
-                <label for="pseudo"></label>
-                <input class="form-pseudo" type="text" id="pseudo" name="pseudo" required placeholder="Pseudo"><br>
+                <input class="form-pseudo" type="text" id="pseudo" name="pseudo" required placeholder="Pseudo" required><br>
              
-                <label for="mdp"></label>
-                <input class="form-mdp" type="password" id="mdp" name="mdp" placeholder="Mot de passe"><br>
+                <input class="form-mdp" type="password" id="mdp" name="mdp" placeholder="Mot de passe" required><br>
              
-                <label for="confirmmdp"></label>
-                <input class="form-confirm" type="password" id="confirmpassword" name="confirmmdp" placeholder="Confirmer mot de passe"><br>
+                <input class="form-confirm" type="password" id="confirmpassword" name="confirmmdp" placeholder="Confirmer mot de passe" required><br>
              
      
                 <input class="button-inscription" type="submit" value="Inscription">

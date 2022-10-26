@@ -22,12 +22,14 @@ margin: 5em;
     align-items: center;
 }
 .bouttonconnexion{
-    border-radius:0.3em;
-    color: white;
     background-color: orange;
-    width: 6.3em;
-    height: 3em;
-    Margin-top: 2em;
+    color: white;
+    padding: 1em;
+    border : solid ; 
+    border-radius: 3px;
+    border-color: orange;
+    margin-top: 0.5em;
+    width: fit-content;
 }
 .formulairelogin input{
     border-radius: 0.5em;

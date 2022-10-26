@@ -1,5 +1,18 @@
 <?php
     require_once 'init.php';
+    // Récupération des données pour la section statistiques
+    $fastestTimeStatement = $db->prepare("SELECT game_score FROM score ORDER BY game_score ASC LIMIT 1");
+    $fastestTimeStatement->execute();
+    $userCountStatement = $db->prepare("SELECT COUNT(user_id) as 'count' FROM user");
+    $userCountStatement->execute();
+    $gameCountStatement = $db->prepare("SELECT COUNT(score_id) as 'count' FROM score");
+    $gameCountStatement->execute();
+    $onlineCountStatement = $db->prepare("SELECT count(*) as 'count' FROM `user` WHERE `last_online` >= DATE_SUB(NOW(), INTERVAL 10 MINUTE)");
+    $onlineCountStatement->execute();
+    $onlineCount = $onlineCountStatement->fetchAll();
+    $gameCount = $gameCountStatement->fetchAll();
+    $fastestTime = $fastestTimeStatement->fetchAll();
+    $userCount = $userCountStatement->fetchAll();
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -68,18 +81,18 @@
             <div class="stats">
                 <div class="row_1">
                     <div id="games_played" class="stat_box">
-                        <p>500</p> <span>Parties jouées</span> 
+                        <p><?=$gameCount[0]['count']?></p> <span>Parties jouées</span> 
                     </div>
                     <div id="best_time" class="stat_box">
-                        <p>4s</p> <span>Temps record<nspa > 
+                        <p><?=$fastestTime[0]['game_score']?>s</p> <span>Temps record<nspa > 
                     </div>
                 </div>
                 <div class="row_2">
                     <div id="players_online" class="stat_box">
-                        <p>32235</p> <span>Joueurs connectés</span> 
+                        <p><?=$onlineCount[0]['count']?></p> <span>Joueurs connectés</span> 
                     </div>
                     <div id="registered_players" class="stat_box">
-                        <p>53653</p> <span>Joueurs enregistrés</span> 
+                        <p><?=$userCount[0]['count']?></p> <span>Joueurs enregistrés</span> 
                     </div>
                 </div>
             </div>
