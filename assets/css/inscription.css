@@ -65,6 +65,8 @@ body{
 
 
 
+
+
 @media screen and (max-width : 480px) {
     .form-email , .form-pseudo , .form-mdp , .form-confirm{
         border-radius: 0.3em;
@@ -111,3 +113,43 @@ body{
 
 
 
+#messagemdp {
+    display: none;
+    flex-direction: column;
+    color: rgba(255, 255, 255, 0.404);
+    background-color: rgb(8, 8, 43);
+    border-radius: 0,3em;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+    letter-spacing: 0,5px;
+    justify-content: center;
+    margin-left: 100px;
+    animation: anime 0.5s ease-out;
+    
+}
+@keyframes anime {
+    from {
+        transform: translateY(100px);
+    }
+}
+
+.invalid{
+    color: red;
+}
+.invalid::before{
+    position: relative;
+    left: -7px;
+    content: "✗";
+}
+
+.valid {
+    color: green;
+    content: "✗" ;
+}
+
+.valid::before{
+    position: relative;
+    left: -7px;
+    content: "✓";
+}

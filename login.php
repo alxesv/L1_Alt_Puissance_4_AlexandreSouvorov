@@ -27,17 +27,8 @@
 
                 <input type="email" name="email" id = "email" placeholder="Email" required></input>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <label for="Mot de passe "></label>
-                <input type="password" name="password" placeholder="Mot de passe"></input>
-=======
                 <label for="password"></label>
                 <input type="password" name="mot_de_passe" id = "password" placeholder="Mot de passe"></input>
->>>>>>> 8f30f36d217152a288c4a3960d78a6a6d76bed09
-=======
-                <input type="password" name="mot_de_passe" id = "password" placeholder="Mot de passe" required></input>
->>>>>>> e4fa55b1d36f9d680c97d5bea6398228251f3d8b
 
                 <button class="bouttonconnexion" type="submit"> Connexion</button>
             </form>

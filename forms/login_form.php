@@ -1,6 +1,5 @@
 <?php
 
-=======
 require_once '../init.php';
 
 
@@ -29,4 +28,3 @@ if(empty($result)){
 
 
 ?>
->>>>>>> 8f30f36d217152a288c4a3960d78a6a6d76bed09
