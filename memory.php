@@ -2,6 +2,7 @@
     require_once 'init.php';
     if(isset($_SESSION['user_id'])){
     $user_id = $_SESSION['user_id'];
+    var_dump($user_id);
     $sql = "SELECT `message`.`message` as 'message', user.pseudo as 'auteur', message_time as 'time', case when user.user_id = $user_id then 'Vrai' else 'Faux' end as estExpediteur
     FROM `message`
     INNER JOIN user ON `message`.author_id = user.user_id
@@ -106,9 +107,9 @@
         ?>
         </div>
         <div class ="chat-send">
-        <form action="" method="" class="send-message">
-            <input type="text" placeholder="Votre message..." name="message" id="message">
-            <input type="submit" value="Envoyer" id="send-button">
+        <form action="./send_message.php" method="POST" class="send-message">
+            <input type="text" placeholder="Votre message..." name="messagetxt" id="messagetxt">
+            <input type="submit" value="Envoyer" id="send-button" name="valide" onclick="message()">
         </form>
         </div>
     </div>
@@ -120,6 +121,7 @@
      <?php include 'view/footer.inc.php'
     ?>
     <!-- FOOTER -->
-    <script src="assets/js/burger.js"> </script>
+    <script src="assets/js/burger.js"></script>
+    <script src="assets/js/chat.js" ></script>
 </body>
 </html>
