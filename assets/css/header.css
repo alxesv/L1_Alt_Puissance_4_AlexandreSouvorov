@@ -77,9 +77,10 @@ a .bouttonjouer:hover{
     z-index: 1;
     top: 0;
     left: -250px;
-    background-color: #5e944544;
+    background-color: rgba(0, 0, 0, 0.267);
     padding-top: 60px;
     transition: left 0.5s ease;
+    border-radius: 30px;
   }
   
   /* Sidenav menu links */
@@ -87,7 +88,7 @@ a .bouttonjouer:hover{
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: #e67b24;
     display: block;
     transition: 0.3s;
   }
@@ -113,7 +114,7 @@ a .bouttonjouer:hover{
     display: block;
     width: 35px;
     height: 5px;
-    background-color:white;
+    background-color:rgb(255, 255, 255);
     margin: 6px 0;
   }
 }

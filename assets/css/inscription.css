@@ -60,13 +60,49 @@ body{
     border : solid ; 
     border-radius: 3px;
     border-color: orange;
+    animation-name: couleur;
+    animation-duration: 4s;
+}
+
+/* animation bouton inscription */
+@keyframes couleur{
+    from{
+        border-color: rgb(8, 8, 43) ;
+        background-color: rgb(8, 8, 43) ;
+        width: 2%;
+    }
+    25%{
+        background-color: rgb(8, 8, 43);
+        border-color:  rgb(8, 8, 43) ;
+        width: 100%
+    }
+    50%{
+        background-color: rgb(8, 8, 43) ;
+        border-color:  rgb(8, 8, 43) ;
+        width: 5%
+    }
+    75%{
+        background-color: rgb(8, 8, 37);
+        border-color: rgb(8, 8, 37);
+        width: 100%;
+    }
+    85%{
+        background-color: rgb(8, 8, 37);
+        border-color: rgb(8, 8, 37);
+        width: 5%;
+    }
+
+
+    to{
+        background-color: orange;
+    }
 }
 
 
 
 
 
-
+/* rendre la page compatible format mobile */
 @media screen and (max-width : 480px) {
     .form-email , .form-pseudo , .form-mdp , .form-confirm{
         border-radius: 0.3em;
@@ -125,9 +161,13 @@ body{
     letter-spacing: 0,5px;
     justify-content: center;
     margin-left: 100px;
-    animation: anime 0.5s ease-out;
+    animation: anime 0.5s ease-in;
     
 }
+
+
+
+/* animation bloc des criteres du mdp */
 @keyframes anime {
     from {
         transform: translateY(100px);

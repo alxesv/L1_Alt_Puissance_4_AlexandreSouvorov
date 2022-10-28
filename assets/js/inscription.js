@@ -62,7 +62,6 @@ password.onkeyup = function(){
 
 }
 
-"[$&+,:;=?@#|'<>.-^*()%!]"
 
 
 
