@@ -27,7 +27,8 @@
 
                 <input type="email" name="email" id = "email" placeholder="Email" required></input>
 
-                <input type="password" name="mot_de_passe" id = "password" placeholder="Mot de passe" required></input>
+                <label for="password"></label>
+                <input type="password" name="mot_de_passe" id = "password" placeholder="Mot de passe"></input>
 
                 <button class="bouttonconnexion" type="submit"> Connexion</button>
             </form>

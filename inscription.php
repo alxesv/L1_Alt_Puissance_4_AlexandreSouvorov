@@ -46,11 +46,24 @@
                 <input class="form-mdp" type="password" id="mdp" name="mdp" placeholder="Mot de passe" required><br>
              
                 <input class="form-confirm" type="password" id="confirmpassword" name="confirmmdp" placeholder="Confirmer mot de passe" required><br>
-             
+
+                <!-- bloc criteres d'un mot de passe fort -->
+                <div id = "messagemdp" class ="messagepass"> 
+                    <h3>Pour un mot de passe fort, remplissez tout les critères !</h3>
+                    <p id ="letter" class = "invalid">Une lettre minuscule</p>
+                    <p id ="capital" class = "invalid">Une lettre majuscule</p>
+                    <p id ="numberMin" class = "invalid">Un chiffre</p>
+                    <p id ="number" class = "invalid">Plus de 8 caratères</p>
+                    <p id ="special" class = "invalid">Un caractère spécial au moins</p>
+                </div>
      
                 <input class="button-inscription" type="submit" value="Inscription">
              </form>
+            
+
          </section>
+
+       
 
 
     </main>
@@ -63,5 +76,6 @@
     ?>
 <!-- FOOTER -->
 <script src="assets/js/burger.js"> </script>
+<script src ="assets/js/inscription.js"></script>
 </body>
 </html>
