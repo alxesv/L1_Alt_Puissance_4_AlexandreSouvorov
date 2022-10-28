@@ -71,8 +71,8 @@ a .bouttonjouer:hover{
 @media (max-width: 680px){
 /* Sidenav menu */
 .sidenav {
-    height: 50%;
-    width: 250px;
+    height: 36%;
+    width: 225px;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -80,15 +80,28 @@ a .bouttonjouer:hover{
     background-color: rgba(0, 0, 0, 0.267);
     padding-top: 60px;
     transition: left 0.5s ease;
-    border-radius: 30px;
+    border-radius: 22px;
   }
+  @media (max-width : 680px){
+  .titredebannieres, .soustitre{
+    display: none;
+  }
+    
+  }
+
+  @media (max-width : 680px){
+    .titreacceuil{
+    margin-left: 7em;
+    }
+      
+    }
   
   /* Sidenav menu links */
   .sidenav a {
-    padding: 8px 8px 8px 32px;
+    padding: 8px 8px 8px 20px;
     text-decoration: none;
-    font-size: 25px;
-    color: #e67b24;
+    font-size: 20px;
+    color:whitesmoke;
     display: block;
     transition: 0.3s;
   }
